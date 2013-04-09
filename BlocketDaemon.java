@@ -10,7 +10,7 @@ import java.net.DatagramSocket;
  * 1. Listening on UDP ports 2600 - 2610 using threads.
  * 2. Debug mode for beautiful output. It can be enabled by starting the daemon
  *    with "java BlocketDaemon DEBUG" from console.
- * 3. Error messages alá Amiga style.
+ * 3. Error messages al√° Amiga style.
  * 4. Thoroughly commented code.
  * 
  * How to compile and run:
@@ -56,13 +56,11 @@ public class BlocketDaemon extends Thread {
 	
 	/**
 	 * Runs the daemon
-	 *  
-	 * @throws IOException When a datagram could not be received or sent
 	 */
 	public void run() {
 		while (true) {
 			try {
-				// Wait to receiver a datagram, this is blocking
+				// Wait to receive a datagram, this is blocking
 				this.waitForDatagram();
 				
 				// Once a datagram has been received, reply with IP and timestamp
@@ -178,7 +176,7 @@ public class BlocketDaemon extends Thread {
 class Utils {
 	
 	/**
-	 * It prints the localizedMessage of an exception to stderr alá Amiga style ;)
+	 * It prints the localizedMessage of an exception to stderr al√° Amiga style ;)
 	 * 
 	 * @param e The exception thrown
 	 */
